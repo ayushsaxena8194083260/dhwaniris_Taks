@@ -9,24 +9,42 @@
 		<div class="col-md-12 ml-sm-auto" style="overflow-x: auto;">
 			<table>
 				<thead>
-				  <tr>
+	
+				  <!-- <tr>
 					<th scope="col">Serial No.</th>
 					<th scope="col">Name</th>
+					<th scope="col">UserName</th>
 					<th scope="col">Email</th>
-					<th scope="col">Phone No.</th>
-					<th scope="col">Role</th>
-					<th scope="col">Location</th>
-				  </tr>
+					<th scope="col">Phone</th>
+					<th scope="col">Website</th>
+					<th scope="col">street</th>
+					<th scope="col">Suite</th>
+					<th scope="col">City</th>
+					<th scope="col">ZipCode</th>
+					<th scope="col">lat.</th>
+					<th scope="col">lng.</th>
+
+				  </tr> -->
 				</thead>
 				<tbody>
 					<tr
-					*ngFor="let u of userList ; let i = index">
-					<td data-label="Account">{{i + 1}}</td>
-					<td data-label="Due Date">{{u.name}}</td>
-					<td data-label="Amount">{{u.email}}</td>
-					<td data-label="Period">{{u.phone}}</td>
-					<td data-label="Period">{{u.role}}</td>
-					<td data-label="Period">{{u.location}}</td>
+					*ngFor="let u of clientList ; let i = index">
+					<td data-label="Serial No.">{{i + 1}}</td>
+					<td data-label="Name">{{u.name}}</td>
+					<td data-label="UserName">{{u.username}}</td>
+					<td data-label="Email">{{u.email}}</td>
+					<td data-label="Phone">{{u.phone}}</td>
+					<td data-label="Website">{{u.website}}</td>
+					<td data-label="street" *ngIf="u.address">{{u.address.street}}</td>
+					<td data-label="Suit"  *ngIf="u.address">{{u.address.suite}}</td>
+					<td data-label="City"  *ngIf="u.address">{{u.address.city}}</td>
+					<td data-label="ZipCode" *ngIf="u.address">{{u.address.zipcode}}</td>
+					<td data-label="lat."  *ngIf="u.address.geo">{{u.address.geo.lat}}</td>
+					<td data-label="lng."  *ngIf="u.address.geo">{{u.address.geo.lng}}</td>
+					<td data-label="CompanyName"  *ngIf="u.company">{{u.company.name}}</td>
+					<td data-label="Catch Pharse"  *ngIf="u.company">{{u.company.catchPhrase}}</td>
+					<td data-label="BS"  *ngIf="u.company">{{u.company.bs}}</td>
+					
 				  </tr>
 				 
 				</tbody>
