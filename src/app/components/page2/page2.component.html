@@ -1,0 +1,17 @@
+
+<div class="container">
+    <div class="row">
+        <h1>You are on Page 2</h1>
+    </div>
+    <div class="row">
+		<button routerLink="">Page 1</button>
+	</div>
+    <div class="row ">
+        <div class="col-md-12 ml-sm-auto mt-5">
+          
+            <canvas ngChartjs [data]="pieChartData" [labels]="pieChartLabels" [colors]="pieColors"
+              [chartType]="pieChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+          </div>
+    </div>
+</div>
+

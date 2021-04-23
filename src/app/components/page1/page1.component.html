@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="row">
+		<h1>You are on Page1</h1>
+	</div>
+	<div class="row">
+		<button routerLink="/page">Page 2</button>
+	</div>
+	<div class="row mt-5">
+		<div class="col-md-12 ml-sm-auto" style="overflow-x: auto;">
+			<table>
+				<thead>
+				  <tr>
+					<th scope="col">Serial No.</th>
+					<th scope="col">Name</th>
+					<th scope="col">Email</th>
+					<th scope="col">Phone No.</th>
+					<th scope="col">Role</th>
+					<th scope="col">Location</th>
+				  </tr>
+				</thead>
+				<tbody>
+					<tr
+					*ngFor="let u of userList ; let i = index">
+					<td data-label="Account">{{i + 1}}</td>
+					<td data-label="Due Date">{{u.name}}</td>
+					<td data-label="Amount">{{u.email}}</td>
+					<td data-label="Period">{{u.phone}}</td>
+					<td data-label="Period">{{u.role}}</td>
+					<td data-label="Period">{{u.location}}</td>
+				  </tr>
+				 
+				</tbody>
+			  </table>
+		
+		</div>
+
+	  </div>
+</div>
+

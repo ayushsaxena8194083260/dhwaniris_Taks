@@ -1,0 +1,22 @@
+.row h1{
+    align-items: center;
+    margin: auto;
+}
+
+.row button{
+    position: absolute;
+    right: 50px;
+    margin-bottom: 50px;
+
+}
+@media screen and (max-width: 1000px) {
+    .row  button {
+        position: absolute;
+    right: 40%;
+    margin-bottom: 30px;
+    margin-top: 13px;
+    width: 220px;
+    align-items: center;
+    }
+}
+
